@@ -1,0 +1,107 @@
+%CONFIG. MEMOIR
+%Define o tamanho da fonte para os título das seções primárias (Large)
+\chapterstyle{section}
+\renewcommand*{\chapnumfont}{\normalfont\Large\bfseries}
+\renewcommand*{\chaptitlefont}{\normalfont\Large\bfseries}
+
+%Define o cabeçalho para 0pt.
+\setlength\beforechapskip{-\baselineskip}
+
+%Algarismos arábicos nas páginas
+\pagenumbering{arabic}
+
+%Estilo de página
+\pagestyle{simple}
+
+%Define a PARTE (da classe Memoir) sem numeração de páginas.
+\aliaspagestyle{part}{empty}
+
+%Define secionamento numerado até a seção quaternária.
+\settocdepth{subsubsection}
+\setsecnumdepth{subsubsection}
+
+%Config. das notas de rodapé.
+\setlength{\footmarkwidth}{0em}
+
+%Espaçamento de 1pt entre os parágrafos.
+\setlength{\parskip}{1\baselineskip}
+
+%Define a indentação padrão do parágrafos.
+\setlength{\parindent}{1.25cm}
+
+%Define o espaçamento entre linhas (exceto para citações longas).
+\OnehalfSpacing
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lipsum}
+\usepackage{xspace}
+
+%FONTES
+%Fonte padrão
+\usepackage{times}
+\usepackage{soul}
+\usepackage{alltt}
+\usepackage{textcmds}
+
+%GEOMETRIA
+\usepackage[a4paper,%
+			left=3.0cm,% 
+			right=2.5cm,% 
+			top=3.0cm,% 
+			bottom=2.5cm]{geometry}
+\usepackage{microtype}
+\usepackage{calc}
+
+%HIPERLINKS
+\usepackage[breaklinks,%
+			hidelinks,%
+			colorlinks=true,%
+			allcolors=blue]{hyperref}
+\usepackage{xurl}
+
+%DIVEROS
+\usepackage{graphicx}
+\usepackage[svgnames]{xcolor}
+\usepackage{pdfpages}
+\usepackage{multicol}
+\usepackage{smartdiagram}
+\usepackage{tabularx}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+
+%IDENTIFICAÇÃO DO PROJETO (CAPA)
+%============INÍCIO============
+\newcommand{\instituicao}{Instituto Federal de Pernambuco}
+\newcommand{\campus}{Campus Garanhuns}
+
+\newenvironment{idproj}
+{\SingleSpacing\footnotesize\list{}{\rightmargin=0cm \leftmargin=6cm}%
+	\item\relax}%
+{\endlist}
+%============FIM============
+
+%REFERÊNCIAS E CITAÇÕES ABNT 6023 e 10520
+%============INÍCIO============
+%Referências e Citações.
+\RequirePackage[alf,
+				abnt-emphasize=bf,%
+				abnt-etal-list=3,%
+				abnt-etal-text=emph,%
+				abnt-missing-year=sd,%
+				abnt-repeated-author-omit=yes,%
+				abnt-repeated-title-omit=yes,%
+				abnt-thesis-year=final,%
+				abnt-doi=link,%
+				]{abntex2cite}
+
+%Ambiente para citações longas.
+\newenvironment{citar}
+{\SingleSpacing\footnotesize\list{}{\rightmargin=0cm \leftmargin=4cm}%
+	\item\relax}%
+{\endlist}
+%============FIM============
+
+

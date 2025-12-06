@@ -1,0 +1,88 @@
+%Modelos de entradas para o pacote abntex2cite
+
+%Livro com um ou dois autores (não-organizadores)
+%Separar autores por 'and'
+%==============================
+@book{,
+	title      = {},    
+	author     = {},
+    edition    = {},
+    address    = {},
+    publisher  = {},
+    year       = {},
+    translator = {},
+}
+
+%Capítulo de livro que tenha organizador(es). (Orgs(s)).
+%==============================
+@incollection{ ,
+		title        ={},%Do capítulo
+		author       ={},%Do capítulo
+		booktitle    ={},%Do lilvro
+		booksubtitle ={},%Do livro (se houver)
+		editor       ={},%Nome dos organizadores
+		editortype   ={Org(s).},
+		address      ={},%Local
+		publisher    ={},%Editora
+		year         ={},%Ano
+		pages        ={},%Opcinal. Formato: págInício-págFim
+}
+%==============================
+%Artigo publicado em revista científica.
+@article{,
+    author  = {},%Autor(es) do artigo
+    title   = {},%Título do artigo
+    journal = {},%Nome da revista.
+    ISSN    = {},
+    volume  = {},
+    number  = {},
+    month   = {},
+    date    = {},
+    pages   = {},
+    doi     = {},
+    url     = {},
+    urlaccessdate = {01 jun. 1970},
+}
+%==============================
+%Artigos publicados em sites, revistas, blogs, etc
+%Não use essa entrada para artigos acadêmicos.
+@online{,
+	address       ={},
+	author        ={},
+	journal       ={},
+	month         ={},
+	title         ={},
+	url           ={},
+	publisher={on-line},
+	urlaccessdate ={},
+	year          ={}
+}
+%==============================
+%TCC, Dissertação, Tese
+%Essa entrada serve para TCC de graduação, TCC de %especialização, Dissertação de mestrado, Tese de doutorado.
+%Altere o campo 'type' de modo a adequar o tipo de trabalho.
+@thesis{,
+author      = {},
+title       = {},
+type        = {Dissertação (Mestrado ...)},
+school      = {},
+address     = {},
+month       = {},
+year        = {},
+pages       = {},
+pagename    = {f.},
+}
+%==============================
+%Entrada usada para citar manuais ou normas (como as da ABNT)
+@manual{,
+		author		  ={},
+		organization  ={},
+		title		  ={},
+		url			  ={},
+		urlaccessdate ={},
+		year		  ={},
+}
+
+
+
+

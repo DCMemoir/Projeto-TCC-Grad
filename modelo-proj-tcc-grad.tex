@@ -1,0 +1,108 @@
+\documentclass[a4paper,12pt,oneside,extrafontsizes]{memoir}
+\input{pkgdef+proj-tcc-grad}
+
+\title{\textsc{Digite o título do projeto}}%
+\author{Digite o nome do autor}
+%SUBSTITUIIR "Data de submissão" pelo local, mês e ano apropriados.
+\date{Garanhuns, Maio 2025}
+
+%INÍCIO DO DOCUMENTO
+%PRÉ-TEXTUAIS
+%==================================
+\begin{document}
+\input{capa-proj-tcc-grad}
+%SUMÁRIO
+\newpage\tableofcontents*
+\thispagestyle{empty}
+%INÍCIO DO TEXTO
+%==================================
+%TEXTUAIS
+\chapter{Apresentação}
+Esse modelo de documento foi elaborado com o objetivo de facilitar a escrita do projeto -- \textit{MAS NÃO DO TRABALHO FINAL} -- dos estudantes dos cursos superiores do IFPE Campus Garanhuns.
+
+O modelo de \textbf{projeto de curso de graduação} destina-se à elaboração das etapas inicias do trabalho de conclusão de curso (TCC), incluindo a seleção das referências utilizadas e sua inclusão no arquivo .bib reconhecido pelo \LaTeX, dos objetivos da pesquisa, da metodologia de coleta e análise de dados, do cronograma, dos resultados esperados e, eventualmente, alguma outra seção necessária à escrita do trabalho.
+
+Este projeto/modelo conta com quatro arquivos:
+\begin{enumerate}
+	\item \textit{capa-proj-tcc-grad.tex}: contém as definições da capa bem como dois comandos relativos à identificação do curso superior
+	\item \textit{pkgdef+proj-tcc-grad.tex}: contém todas as definições necessárias ao funcionamento do projeto \LaTeX\ conforme as normas ABNT (em particular, margens, secionamento, referências e citações). Neste arquivo encontra-se a definição do ambiente \textbf{citar} (\verb*|\begin{citar}...\end{citar}|), responsável pela organização de citações longas, isto é, com mais de três linhas.
+	\item \textit{modelo-proj-tcc-grad.tex}: contém a estrutura básica em termos de seções de um projeto de TCC necessária a escrita do projeto. \underline{É nesse arquivo que o trabalho será elaborado/escrito.}
+	\item \textit{referencias-proj-tcc-grad.bib}: contém os modelos mais comuns de entradas bibliográficas reconhecidos pelo \LaTeX. O pacote associado aos campos deste arquivo é o \verb*|abntex2cite|, que se encontra com as definições no arquivo \verb*|pkgdef+proj-tcc-grad.tex|.
+\end{enumerate}
+
+Para usar esse modelo, baixe a pasta do projeto (.zip) em \url{https://github.com/dcmemoir}, \textbf{ProjetoTCC} e:
+\begin{enumerate}
+	\item se usar o Overleaf, faça o \textit{upload} da pasta compactada ao criar um novo projeto
+	\item se tem o \LaTeX\ instalado em seu computador, escolha uma pasta de trabalho, descompacte o arquivo .zip e use seu editor \LaTeX para escrever.
+\end{enumerate}
+
+\fbox{LEMBRE-SE 1:} O arquivo de trabalho é \verb|modelo-proj-tcc-grad.tex| e no início do arquivo será preciso incluir as informações sobre o título, seu nome e, também, a data: (\verb|\author{}, \title{}, \date{}|) 
+
+\fbox{LEMBRE-SE 2:} O arquivo \verb|capa-proj-tcc-grad.tex| deverá ser preenchido com as informações sobre o curso e, também, o nome do/a orientador/a.
+
+\fbox{LEMBRE-SE 3:} O texto dessa seção de Apresentação deverá ser apagado!!!!
+
+
+\chapter{Objetivos}
+\section{Objetivo geral:}
+\begin{itemize}
+\item Verbo no infinitivo...
+\end{itemize}
+
+\section{Objetivos específicos:}
+\begin{itemize}
+\item Verbo no infinitivo...
+\item Verbo no infinitivo...
+\item Verbo no infinitivo...
+\item  ...
+\end{itemize}
+
+\chapter{Fundamentação}
+Abaixo estão alguns exemplos de seccionamento do documento.
+
+\section{Seção primária 1 da fundamentação}
+
+\section{Seção primária 2 da fundamentação}
+
+\section{Seção primária 3 da fundamentação}
+
+\subsection{Seção secundária 1 da Seção 3}
+
+\subsection{Seção secundária 2 da Seção 3}
+
+\subsubsection{Seção terciária 1 da Seção 3}
+
+\chapter{Metodologia}
+
+\chapter{Cronograma}
+\begin{tabularx}{\textwidth}{|X|c|}
+\hline
+\textbf{Atividade} & \textbf{Período}  \\
+\hline
+Definição do Tema & 15/05 – 20/05  \\
+\hline
+Revisão Bibliográfica Inicial & 21/05 – 31/05  \\
+\hline
+Coleta de Dados & 01/06 – 30/06  \\
+\hline
+Análise dos Dados & 01/07 – 31/07  \\
+\hline
+Redação do Relatório & 01/08 – 20/08  \\
+\hline
+Revisão e Formatação & 21/08 – 30/08  \\
+\hline
+Entrega Final & 30/08  \\
+\hline
+\end{tabularx}
+
+\chapter{Resultados esperados}
+
+%PÓS-TEXTUAIS: REFERÊNCIAS
+\backmatter{
+\renewcommand{\bibname}{Referências}
+\bibintoc
+\bibliographystyle{abntex2-alf}
+\bibliography{referencias-proj-tcc-grad}
+}
+%PÓS-TEXTUAIS: REFERÊNCIAS
+\end{document}
